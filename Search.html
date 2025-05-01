@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cassette</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./assets/Cassette.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img src="./assets/Cassette.png" alt="Logo" />
+                    <span>Cassette</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="Main.html" class="active">
+                                <img src="./assets/home.png" alt="Home" />
+                                Home
+                            </a>
+                        </li>
+                        <li style="display: flex">
+                              <a href="Search.html">
+                                <img src="./assets/search.png" alt="Search" />
+                            </a>
+                            <input
+                                type="search"
+                                id="search"
+                                placeholder="Search songs..."
+                            />
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                    <h2> Songs</h2>
+                    <div class="cards-container"></div>
+            </main>
+
+            <footer class="music-player">
+                <div class="song-info">
+                    <img src="./assets/default.jpg" alt="Song Cover" />
+                    <div class="song-details">
+                        <p class="song-title">Song Title</p>
+                        <p class="artist-name">Artist Name</p>
+                    </div>
+                </div>
+
+                <div class="player-controls">
+                    <img
+                        id="shufflebtn"
+                        src="./assets/shuffle.png"
+                        alt="Shuffle"
+                    />
+                    <img
+                        id="prevbtn"
+                        src="./assets/previous_musicbar.png"
+                        alt="Previous"
+                    />
+                    <img
+                        id="playbtn"
+                        src="./assets/play_musicbar.png"
+                        alt="Play"
+                    />
+                    <img
+                        id="nextbtn"
+                        src="./assets/next_musicbar.png"
+                        alt="Next"
+                    />
+                    <img id="repeatbtn" src="./assets/loop.png" alt="Loop" />
+                </div>
+
+                <div class="player-timeline">
+                    <span id="current-time" class="time-container">0:00</span>
+                    <input
+                        type="range"
+                        class="timeline-slider"
+                        id="timeline-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                    />
+                    <span id="total-duration" class="time-container">0:00</span>
+                </div>
+
+                <div class="volume-controls">
+                    <img src="./assets/device.png" alt="Device" />
+                    <img src="./assets/playlist.png" alt="Playlist" />
+                    <img src="./assets/music.png" alt="Music" />
+                    <input
+                        type="range"
+                        class="volume-slider"
+                        min="0"
+                        max="100"
+                        value="100"
+                    />
+                </div>
+            </footer>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
